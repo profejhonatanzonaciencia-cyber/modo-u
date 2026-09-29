@@ -1,120 +1,371 @@
 export default function Home() {
+  const materias = [
+    {
+      icono: "📐",
+      titulo: "Matemática",
+      texto: "Álgebra, aritmética, geometría y razonamiento matemático.",
+    },
+    {
+      icono: "🧪",
+      titulo: "Química",
+      texto: "Comprende conceptos, fórmulas y practica con ejercicios.",
+    },
+    {
+      icono: "🎯",
+      titulo: "Prepárate",
+      texto: "Avanza paso a paso hacia tu ingreso a la universidad.",
+    },
+  ];
+
   return (
     <main
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(135deg, #5b21b6, #7c3aed, #2563eb)",
-        color: "white",
+        background: "#f7f8fc",
+        color: "#172033",
         fontFamily: "Arial, sans-serif",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "30px",
       }}
     >
-      <div
+      {/* BARRA SUPERIOR */}
+      <header
         style={{
-          maxWidth: "900px",
-          width: "100%",
-          textAlign: "center",
+          height: "72px",
+          background: "white",
+          borderBottom: "1px solid #e8eaf2",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "0 7%",
         }}
       >
         <div
           style={{
-            display: "inline-block",
-            backgroundColor: "rgba(255,255,255,0.15)",
-            padding: "8px 18px",
-            borderRadius: "30px",
-            marginBottom: "25px",
-            fontWeight: "bold",
-          }}
-        >
-          🚀 Tu camino hacia la universidad
-        </div>
-
-        <h1
-          style={{
-            fontSize: "64px",
-            margin: "0 0 10px",
-            fontWeight: "800",
+            fontSize: "25px",
+            fontWeight: "900",
+            color: "#6536e8",
           }}
         >
           MODO U
-        </h1>
+        </div>
 
-        <h2
+        <nav
           style={{
-            fontSize: "30px",
-            marginBottom: "20px",
+            display: "flex",
+            gap: "30px",
+            alignItems: "center",
+            fontSize: "14px",
+            fontWeight: "600",
           }}
         >
-          Activa tu potencial
-        </h2>
+          <span>Inicio</span>
+          <span>Materias</span>
+          <span>Mi progreso</span>
 
-        <p
+          <button
+            style={{
+              border: "none",
+              background: "#6536e8",
+              color: "white",
+              padding: "11px 20px",
+              borderRadius: "10px",
+              fontWeight: "700",
+              cursor: "pointer",
+            }}
+          >
+            Ingresar
+          </button>
+        </nav>
+      </header>
+
+      {/* PORTADA */}
+      <section
+        style={{
+          minHeight: "570px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "60px 8%",
+          background:
+            "linear-gradient(135deg, #ffffff 0%, #f5f1ff 55%, #eef3ff 100%)",
+        }}
+      >
+        <div style={{ maxWidth: "590px" }}>
+          <div
+            style={{
+              display: "inline-block",
+              background: "#eee7ff",
+              color: "#6536e8",
+              padding: "8px 14px",
+              borderRadius: "30px",
+              fontWeight: "700",
+              fontSize: "14px",
+              marginBottom: "22px",
+            }}
+          >
+            🚀 Tu camino hacia la universidad
+          </div>
+
+          <h1
+            style={{
+              fontSize: "64px",
+              lineHeight: "1.05",
+              margin: "0 0 18px",
+              fontWeight: "900",
+              letterSpacing: "-2px",
+            }}
+          >
+            Aprende.
+            <br />
+            Practica.
+            <br />
+            <span style={{ color: "#6536e8" }}>Supera tus metas.</span>
+          </h1>
+
+          <p
+            style={{
+              fontSize: "19px",
+              lineHeight: "1.7",
+              color: "#5f6677",
+              maxWidth: "540px",
+              marginBottom: "30px",
+            }}
+          >
+            Prepárate en Matemática y Química con explicaciones claras,
+            ejercicios y práctica pensada para estudiantes que quieren
+            llegar preparados a la universidad.
+          </p>
+
+          <div
+            style={{
+              display: "flex",
+              gap: "14px",
+              alignItems: "center",
+            }}
+          >
+            <button
+              style={{
+                border: "none",
+                background: "#6536e8",
+                color: "white",
+                padding: "15px 25px",
+                borderRadius: "12px",
+                fontSize: "16px",
+                fontWeight: "800",
+                cursor: "pointer",
+                boxShadow: "0 10px 25px rgba(101,54,232,0.25)",
+              }}
+            >
+              Empezar a estudiar →
+            </button>
+
+            <button
+              style={{
+                border: "1px solid #d9dce7",
+                background: "white",
+                color: "#34394a",
+                padding: "14px 23px",
+                borderRadius: "12px",
+                fontSize: "16px",
+                fontWeight: "700",
+                cursor: "pointer",
+              }}
+            >
+              Ver materias
+            </button>
+          </div>
+        </div>
+
+        {/* TARJETA DERECHA */}
+        <div
           style={{
-            fontSize: "20px",
-            lineHeight: "1.6",
-            maxWidth: "700px",
-            margin: "0 auto 35px",
+            width: "390px",
+            background: "white",
+            borderRadius: "24px",
+            padding: "30px",
+            boxShadow: "0 25px 70px rgba(54,42,100,0.14)",
+            border: "1px solid #eeeaf8",
           }}
         >
-          Aprende Matemática y Química paso a paso, practica con ejercicios
-          y prepárate para ingresar a la universidad.
-        </p>
+          <div
+            style={{
+              background: "linear-gradient(135deg,#6536e8,#7d5df4)",
+              borderRadius: "18px",
+              padding: "28px",
+              color: "white",
+              marginBottom: "18px",
+            }}
+          >
+            <div style={{ fontSize: "13px", opacity: 0.8 }}>
+              TU OBJETIVO
+            </div>
 
-        <button
-          style={{
-            backgroundColor: "white",
-            color: "#5b21b6",
-            border: "none",
-            padding: "16px 32px",
-            fontSize: "18px",
-            fontWeight: "bold",
-            borderRadius: "12px",
-            cursor: "pointer",
-          }}
-        >
-          Empezar a estudiar →
-        </button>
+            <div
+              style={{
+                fontSize: "25px",
+                fontWeight: "800",
+                marginTop: "8px",
+              }}
+            >
+              Domina cada tema
+            </div>
+
+            <p
+              style={{
+                lineHeight: "1.5",
+                opacity: 0.9,
+                marginBottom: "0",
+              }}
+            >
+              Aprende a tu ritmo y fortalece tus conocimientos paso a paso.
+            </p>
+          </div>
+
+          <div
+            style={{
+              padding: "18px",
+              border: "1px solid #eceef4",
+              borderRadius: "15px",
+              marginBottom: "12px",
+            }}
+          >
+            <strong>📐 Matemática</strong>
+            <div
+              style={{
+                height: "8px",
+                background: "#eeeef4",
+                borderRadius: "10px",
+                marginTop: "13px",
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  width: "70%",
+                  height: "100%",
+                  background: "#6536e8",
+                }}
+              />
+            </div>
+          </div>
+
+          <div
+            style={{
+              padding: "18px",
+              border: "1px solid #eceef4",
+              borderRadius: "15px",
+            }}
+          >
+            <strong>🧪 Química</strong>
+            <div
+              style={{
+                height: "8px",
+                background: "#eeeef4",
+                borderRadius: "10px",
+                marginTop: "13px",
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  width: "45%",
+                  height: "100%",
+                  background: "#7d5df4",
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MATERIAS */}
+      <section
+        style={{
+          padding: "75px 8% 90px",
+          maxWidth: "1200px",
+          margin: "0 auto",
+        }}
+      >
+        <div style={{ textAlign: "center", marginBottom: "45px" }}>
+          <div
+            style={{
+              color: "#6536e8",
+              fontWeight: "800",
+              marginBottom: "10px",
+            }}
+          >
+            APRENDE A TU RITMO
+          </div>
+
+          <h2
+            style={{
+              fontSize: "38px",
+              margin: "0 0 12px",
+            }}
+          >
+            Todo lo que necesitas para avanzar
+          </h2>
+
+          <p style={{ color: "#6d7280", fontSize: "17px" }}>
+            Empieza desde las bases y progresa paso a paso.
+          </p>
+        </div>
 
         <div
           style={{
-            display: "flex",
-            gap: "20px",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            marginTop: "60px",
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "22px",
           }}
         >
-          <div style={cardStyle}>
-            <div style={{ fontSize: "35px" }}>📐</div>
-            <h3>Matemática</h3>
-            <p>Álgebra, aritmética, geometría y más.</p>
-          </div>
+          {materias.map((materia) => (
+            <div
+              key={materia.titulo}
+              style={{
+                background: "white",
+                padding: "30px",
+                borderRadius: "18px",
+                border: "1px solid #e8eaf1",
+                boxShadow: "0 8px 30px rgba(35,38,55,0.05)",
+              }}
+            >
+              <div
+                style={{
+                  width: "55px",
+                  height: "55px",
+                  borderRadius: "14px",
+                  background: "#f0ebff",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "27px",
+                  marginBottom: "20px",
+                }}
+              >
+                {materia.icono}
+              </div>
 
-          <div style={cardStyle}>
-            <div style={{ fontSize: "35px" }}>🧪</div>
-            <h3>Química</h3>
-            <p>Domina los conceptos y practica ejercicios.</p>
-          </div>
+              <h3
+                style={{
+                  fontSize: "21px",
+                  margin: "0 0 10px",
+                }}
+              >
+                {materia.titulo}
+              </h3>
 
-          <div style={cardStyle}>
-            <div style={{ fontSize: "35px" }}>🎯</div>
-            <h3>Prepárate</h3>
-            <p>Avanza a tu ritmo hacia tu meta universitaria.</p>
-          </div>
+              <p
+                style={{
+                  color: "#6c7280",
+                  lineHeight: "1.6",
+                  margin: "0",
+                }}
+              >
+                {materia.texto}
+              </p>
+            </div>
+          ))}
         </div>
-      </div>
+      </section>
     </main>
   );
 }
-
-const cardStyle = {
-  backgroundColor: "rgba(255,255,255,0.15)",
-  border: "1px solid rgba(255,255,255,0.25)",
-  borderRadius: "18px",
-  padding: "25px",
-  width: "220px",
-  backdropFilter: "blur(10px)",
-};
