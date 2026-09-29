@@ -38,15 +38,17 @@ export default function Home() {
           padding: "0 7%",
         }}
       >
-        <div
+        <a
+          href="/"
           style={{
             fontSize: "25px",
             fontWeight: "900",
             color: "#6536e8",
+            textDecoration: "none",
           }}
         >
           MODO U
-        </div>
+        </a>
 
         <nav
           style={{
@@ -57,9 +59,34 @@ export default function Home() {
             fontWeight: "600",
           }}
         >
-          <span>Inicio</span>
-          <span>Materias</span>
-          <span>Mi progreso</span>
+          <a
+            href="/"
+            style={{
+              color: "#172033",
+              textDecoration: "none",
+            }}
+          >
+            Inicio
+          </a>
+
+          <a
+            href="/materias"
+            style={{
+              color: "#172033",
+              textDecoration: "none",
+            }}
+          >
+            Materias
+          </a>
+
+          <span
+            style={{
+              color: "#172033",
+              cursor: "pointer",
+            }}
+          >
+            Mi progreso
+          </span>
 
           <button
             style={{
@@ -131,8 +158,8 @@ export default function Home() {
             }}
           >
             Prepárate en Matemática y Química con explicaciones claras,
-            ejercicios y práctica pensada para estudiantes que quieren
-            llegar preparados a la universidad.
+            ejercicios y práctica pensada para estudiantes que quieren llegar
+            preparados a la universidad.
           </p>
 
           <div
@@ -142,7 +169,8 @@ export default function Home() {
               alignItems: "center",
             }}
           >
-            <button
+            <a
+              href="/materias"
               style={{
                 border: "none",
                 background: "#6536e8",
@@ -153,12 +181,15 @@ export default function Home() {
                 fontWeight: "800",
                 cursor: "pointer",
                 boxShadow: "0 10px 25px rgba(101,54,232,0.25)",
+                textDecoration: "none",
+                display: "inline-block",
               }}
             >
               Empezar a estudiar →
-            </button>
+            </a>
 
-            <button
+            <a
+              href="/materias"
               style={{
                 border: "1px solid #d9dce7",
                 background: "white",
@@ -168,10 +199,12 @@ export default function Home() {
                 fontSize: "16px",
                 fontWeight: "700",
                 cursor: "pointer",
+                textDecoration: "none",
+                display: "inline-block",
               }}
             >
               Ver materias
-            </button>
+            </a>
           </div>
         </div>
 
@@ -195,9 +228,7 @@ export default function Home() {
               marginBottom: "18px",
             }}
           >
-            <div style={{ fontSize: "13px", opacity: 0.8 }}>
-              TU OBJETIVO
-            </div>
+            <div style={{ fontSize: "13px", opacity: 0.8 }}>TU OBJETIVO</div>
 
             <div
               style={{
@@ -229,6 +260,7 @@ export default function Home() {
             }}
           >
             <strong>📐 Matemática</strong>
+
             <div
               style={{
                 height: "8px",
@@ -256,6 +288,7 @@ export default function Home() {
             }}
           >
             <strong>🧪 Química</strong>
+
             <div
               style={{
                 height: "8px",
