@@ -43,7 +43,10 @@ export default function Materias() {
         >
           <a
             href="/"
-            style={{ color: "#172033", textDecoration: "none" }}
+            style={{
+              color: "#172033",
+              textDecoration: "none",
+            }}
           >
             Inicio
           </a>
@@ -108,8 +111,8 @@ export default function Materias() {
             lineHeight: "1.6",
           }}
         >
-          Elige una materia y comienza a avanzar tema por tema.
-          Cada paso te acerca más a tu objetivo.
+          Elige una materia y comienza a avanzar tema por tema. Cada paso te
+          acerca más a tu objetivo.
         </p>
       </section>
 
@@ -177,8 +180,8 @@ export default function Materias() {
               marginBottom: "28px",
             }}
           >
-            Aprende aritmética, álgebra, geometría y razonamiento
-            matemático desde las bases.
+            Aprende aritmética, álgebra, geometría y razonamiento matemático
+            desde las bases.
           </p>
 
           <div
@@ -199,21 +202,25 @@ export default function Materias() {
             ✓ Razonamiento matemático
           </div>
 
-          <button
+          <a
+            href="/materias/matematica"
             style={{
+              display: "block",
               width: "100%",
-              border: "none",
+              boxSizing: "border-box",
               background: "#6536e8",
               color: "white",
               padding: "15px",
               borderRadius: "12px",
               fontSize: "15px",
               fontWeight: "800",
+              textAlign: "center",
+              textDecoration: "none",
               cursor: "pointer",
             }}
           >
             Estudiar Matemática →
-          </button>
+          </a>
         </div>
 
         {/* Química */}
@@ -269,8 +276,8 @@ export default function Materias() {
               marginBottom: "28px",
             }}
           >
-            Comprende los conceptos fundamentales de química y aprende
-            a resolver ejercicios paso a paso.
+            Comprende los conceptos fundamentales de química y aprende a
+            resolver ejercicios paso a paso.
           </p>
 
           <div
